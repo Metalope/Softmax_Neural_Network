@@ -1,4 +1,5 @@
 # Softmax_Neural_Network
+__A modular neural network with a modular softmax layer__
 
 - The current implemantion shows simple 2D data divided into 3 classes:
 ![Data](Figure_1.png)
