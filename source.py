@@ -23,7 +23,7 @@ train_Y = Y.T  # train_Y -> (3, 20)
 
 learning_rate = 2.0
 np.random.seed(0)
-num_of_epochs = 40
+num_of_epochs = 100
 costs =[] # list to store the costs over the training period
 
 

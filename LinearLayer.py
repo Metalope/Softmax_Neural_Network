@@ -38,8 +38,8 @@ class LinearLayer:
 
         :param upstream_grad: gradient coming in from the upper layer to couple with local gradient
         """
-        self.dW = (1./self.m) * (np.dot(upstream_grad, self.A_prev.T))
-        self.db = (1./self.m) * np.sum(upstream_grad, axis=1, keepdims=True)
+        self.dW =  np.dot(upstream_grad, self.A_prev.T)
+        self.db =  np.sum(upstream_grad, axis=1, keepdims=True)
         self.dA_prev = np.dot(self.params['W'].T, upstream_grad)
 
         if regularized:

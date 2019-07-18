@@ -16,5 +16,5 @@ class SoftmaxLayer:
         # local_grad = self.A.dot(ones.T) * (eye - ones.dot(self.A.T) )
         # self.dZ = upstream_grad * local_grad
 
-        self.dZ = self.A - labels
+        self.dZ = (self.A - labels) / labels.shape[-1]  # divide by size of batch
 
